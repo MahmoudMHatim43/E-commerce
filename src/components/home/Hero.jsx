@@ -11,8 +11,8 @@ function Hero() {
       className="flex flex-col lg:flex-row justify-between items-center gap-4 
       mt-[5vh] mx-auto p-4
       w-[95svw] sm:w-[90vw] min-h-[50vh] 
-      text-light_t1 dark:text-dark_t1 bg-gray_l1 dark:bg-gray_d2
-      rounded-2xl"
+      text-light_t1 dark:text-dark_t1
+      rounded-2xl shadow-lg"
     >
       {/* Left */}
       <div

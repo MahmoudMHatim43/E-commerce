@@ -9,7 +9,7 @@ function Promotion() {
       ref={ref}
       initial={{ x: -200, opacity: 0.25 }}
       animate={{ x: isInView ? 0 : -200, opacity: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.5 }}
       className="flex flex-col sm:flex-row justify-center items-center
       mx-auto mt-[5vh] p-4 w-[95svw] sm:w-[90vw] min-h-[40vh] 
       bg-gradient-to-r from-gray_l1 to-gray_l2 dark:from-gray_d1 dark:to-gray_d2
@@ -33,7 +33,7 @@ function Promotion() {
           rotate: isInView ? -5 : 0,
           opacity: 1,
         }}
-        transition={{ delay: 0.5, duration: 1 }}
+        transition={{ delay: 0.25, duration: 0.5 }}
         className="sm:ml-8 mt-6 sm:mt-0
         text-center sm:text-left text-white font-Caveat font-bold"
       >
