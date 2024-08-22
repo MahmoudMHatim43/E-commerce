@@ -16,7 +16,7 @@ function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 5, opacity: 1 }}
       className="flex items-center justify-between
-      px-2 py-1 mx-auto w-[95svw]
+      px-2 py-1 mx-auto w-[95svw] h-auto
       text-light_t1 dark:text-dark_t1 bg-gray_l1 dark:bg-gray_d1
       rounded-2xl shadow-md"
     >
