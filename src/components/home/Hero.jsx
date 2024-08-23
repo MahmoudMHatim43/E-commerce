@@ -1,63 +1,96 @@
-import React from "react";
+import ToggleButton from "../ToggleButton";
 import { motion } from "framer-motion";
-import { MdOutlineSubdirectoryArrowRight } from "react-icons/md";
+import {
+  FaArrowRight,
+  FaShoppingCart,
+  FaBars,
+  FaChevronDown,
+} from "react-icons/fa";
+import { useState } from "react";
 
 function Hero() {
+  const [mode, setMode] = useState("Dark Mode");
+  const handldeTheme = (isOn) => {
+    if (isOn) {
+      document.documentElement.classList.add("dark");
+      setMode("Light Mode");
+      return;
+    }
+    document.documentElement.classList.remove("dark");
+    setMode("Dark Mode");
+  };
   return (
-    <motion.section
-      initial={{ x: 200, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="flex flex-col lg:flex-row justify-between items-center gap-4 
-      mt-[5vh] mx-auto p-4
-      w-[95svw] sm:w-[90vw] min-h-[50vh] 
-      text-light_t1 dark:text-dark_t1
-      rounded-2xl shadow-lg"
+    <section
+      className="
+      hero-section-css
+      flex flex-col items-center justify-evenly
+      w-full h-[100svh] sm:h-[92.5svh]
+      p-2 mt-0 sm:mt-[7.5svh]
+      shadow-lg
+      "
     >
-      {/* Left */}
-      <div
-        className="flex flex-col justify-center sm:items-start items-center gap-4 
-        p-4
-        text-center sm:text-left font-Josefin"
-      >
-        <h1 className="text-heading-xl font-bold">
-          Welcome to <span className="text-blue_l">The Store</span>, Where your{" "}
-          <span className="text-blue_l">Style</span> is our{" "}
-          <span className="text-orange_c">PRIORITY</span>.
-        </h1>
-        <hr
-          className="w-3/4 sm:w-full
-          border-t-2 border-gray_d1 dark:border-gray_l1"
+      <div className="sm:hidden">
+        <FaBars
+          className="
+        absolute top-4 left-4 z-10
+        text-3xl text-orange-cstm"
         />
+        <ToggleButton onToggle={handldeTheme} theme={mode} />
       </div>
 
-      {/* Right */}
-      <div
-        className="flex flex-col items-center gap-4
-        w-full lg:w-[50%]"
+      <motion.div
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        className="hero-text-container w-full"
       >
-        <motion.img
-          src="hero.webp"
-          alt="Store image"
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
-          className="object-cover
-          w-full h-auto max-h-[300px]
-          rounded-xl shadow-xl"
-        />
+        <h1 className="text-[6rem] sm:text-9xl tracking-tighter md:tracking-wider leading-none text-white font-josefin text-balance font-bold overflow-hidden">
+          <span className="text-blue-800">YOUR </span>
+          <span className="text-blue-800"> STYLE</span> IS OUR
+          <span className="text-orange-cstm"> PRIORITY</span>
+        </h1>
+        <hr className="w-[70%] my-4 border-2 border-orange-cstm" />
+      </motion.div>
+      <div
+        className="
+        flex justify-center gap-6
+        w-full
+        p-2
+        "
+      >
         <motion.button
-          whileHover={{ scaleX: 1.1 }}
-          whileTap={{ scaleX: 0.95 }}
-          className="flex justify-center items-center gap-2
-          p-[1em_3em] 
-          text-body-text bg-blue_d dark:bg-blue_l text-white font-semibold
-          rounded-2xl shadow-md"
+          initial={{ x: -20, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 1.5 }}
+          className="
+        relative z-10 cursor-pointer
+        flex items-center gap-2
+        p-[1em_2em]
+        text-body-text text-center text-white font-Nuntio font-semibold
+        bg-blue-900
+        rounded-xl shadow shadow-fuchsia-800
+        "
         >
-          Shop Now <MdOutlineSubdirectoryArrowRight />
+          <span>Shop Now</span>
+          <FaArrowRight />
+        </motion.button>
+        <motion.button
+          initial={{ x: 20, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 1.5 }}
+          className="
+        relative z-10 cursor-pointer
+        flex items-center gap-2
+        p-[1em_2em]
+        text-body-text text-center text-white font-Nuntio font-semibold
+        bg-gray-600
+        rounded-xl shadow shadow-fuchsia-800"
+        >
+          <span>View Cart</span>
+          <FaShoppingCart />
         </motion.button>
       </div>
-    </motion.section>
+    </section>
   );
 }
 

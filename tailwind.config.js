@@ -19,21 +19,20 @@ module.exports = {
         Caveat: ["Caveat", "cursive"],
       },
       colors: {
-        // Light Theme Colors
-        light_bg: "#f9fafb",
-        light_t1: "#1f2937",
-        light_t2: "#4b5563",
-        blue_l: "#1768AC",
-        gray_l1: "#D1D5DB",
-        gray_l2: "#9CA3AF",
-        // Dark Theme Colors
-        dark_bg: "#1f2937",
-        dark_t1: "#ffffff",
-        dark_t2: "#9ca3af",
-        blue_d: "#1D2D44",
-        gray_d1: "#4B5563",
-        gray_d2: "#111827",
-        orange_c: "#F86624",
+        // light:
+        "light-smoke": "#F2F3F4",
+        "light-flash": "#F5F5F5",
+        "light-peach": "#FFE5B4",
+        "light-t1": "#111111",
+        "light-t2": "#646464",
+        // dark:
+        "dark-smoke": "#100C08",
+        "dark-erie": "#1B1B1B",
+        "dark-rich": "#010B13",
+        "dark-t1": "#eeeeee ",
+        "dark-t2": "#d0d0d0",
+        // other:
+        "orange-cstm": "#FF5800",
       },
     },
   },

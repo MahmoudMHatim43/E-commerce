@@ -6,27 +6,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* navbar */
-* {
-  overflow-x: hidden;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-.nav-item {
-  position: relative;
-}
-.nav-item::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 0;
-  height: 1px;
-  background-color: currentColor;
-  transition: width 0.4s ease, left 0.4s ease;
-}
-.nav-item:hover::before {
-  width: 100%;
-  left: 0;
+body {
+  width: 100svw;
 }
