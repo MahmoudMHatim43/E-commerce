@@ -34,11 +34,13 @@ function Trending() {
       initial={{ x: -200, opacity: 0 }}
       animate={{ x: isInView ? 0 : -200, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="flex flex-col w-[95svw] sm:w-[90svw] items-center
+      className="flex flex-col w-[95svw] sm:w-[90svw] items-center gap-4
       mx-auto mt-[5svh] p-4"
     >
-      <h1 className="text-heading-xl font-Nuntio font-bold">Trending</h1>
-      <div>
+      <h1 className="text-heading-xl text-light_t1 dark:text-dark_t1 font-Nuntio font-bold">
+        Trending
+      </h1>
+      <div className="grid grid-flow-col gap-4 overflow-x-scroll w-full">
         {loading ? (
           <PulseLoader />
         ) : errMsg ? (

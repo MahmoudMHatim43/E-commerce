@@ -26,9 +26,11 @@ function Navbar() {
           src="logo.png"
           alt="company logo"
           className="object-cover
-          w-[50px]"
+          w-[40px]"
         />
-        <span className="text-logo-name font-Caveat font-bold">The Store</span>
+        <span className="w-full text-logo-name font-Caveat font-bold">
+          The Store
+        </span>
       </NavLink>
       {/* list */}
       <div className="w-[70%]">
@@ -37,18 +39,15 @@ function Navbar() {
           text-body-text"
         >
           {pages.map((page, idx) => (
-            <li
+            <NavLink
               key={idx}
-              className={`
-              ${active === page.toLowerCase() && "text-orange_c duration-500"}`}
+              to={page === "Home" ? "/" : `/${page.toLowerCase()}`}
+              className={`nav-item p-2 ${
+                active === page.toLowerCase() && "text-orange_c duration-500"
+              }`}
             >
-              <NavLink
-                to={page === "Home" ? "/" : `/${page.toLowerCase()}`}
-                className="nav-item p-2"
-              >
-                {page}
-              </NavLink>
-            </li>
+              {page}
+            </NavLink>
           ))}
         </ul>
       </div>

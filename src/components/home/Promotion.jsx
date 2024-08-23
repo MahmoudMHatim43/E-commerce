@@ -37,11 +37,11 @@ function Promotion() {
         className="sm:ml-8 mt-6 sm:mt-0
         text-center sm:text-left text-white font-Caveat font-bold"
       >
-        <p className="text-4xl sm:text-5xl">
+        <p className="text-4xl sm:text-5xl overflow-hidden">
           <span className="text-orange_c">20% OFF</span> THIS{" "}
           <span className="text-orange_c">WEEKEND</span>!
         </p>
-        <p className="text-3xl sm:text-4xl mt-2">
+        <p className="text-3xl sm:text-4xl mt-2 overflow-hidden">
           CATCH THE <span className="text-red-600">CHANCE</span>!
         </p>
       </motion.div>

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 
 function ProductCard({ product }) {
-  const [isLong, setIsLong] = useState(false);
   const MAX_LENGTH = 40;
   let desc;
   if (product.description.length > MAX_LENGTH) {
@@ -10,24 +10,25 @@ function ProductCard({ product }) {
     desc = product.description;
   }
   return (
-    <div
-      className="flex flex-col items-center justify-between
-      p-4
-      h-[500px] w-[350px]
+    <motion.div
+      className="flex flex-col items-center justify-between gap-4
+      w-[300px] p-4
      bg-black text-white
-      rounded-2xl"
+      rounded-2xl shadow-xl"
     >
       <img
-        src={product.images[0]}
+        src={product.images[1]}
         alt="product image"
-        className="object-cover w-[95%] h-[250px] rounded-xl"
+        className="object-cover w-[95%] max-h-[300px] rounded-xl"
       />
-      <div>
+      <div className="flex flex-col self-start">
         <span className="text-card-title">{product.title}</span>
         <span className="text-small-text">{desc}</span>
       </div>
-      <span>{product.category.name}</span>
-      <div className="flex w-full justify-between">
+      <span className="self-start text-small-text border border-white p-2 rounded-xl">
+        {product.category.name}
+      </span>
+      <div className="flex flex-row-reverse w-full justify-between">
         <button
           className="
         p-[0.25em_1.5em]
@@ -36,9 +37,9 @@ function ProductCard({ product }) {
         >
           Add To Cart+
         </button>
-        <span className="text-body-text">${product.price}</span>
+        <span className="text-heading-md">${product.price}</span>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -47,8 +47,8 @@ function Hero() {
           rounded-xl shadow-xl"
         />
         <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          whileHover={{ scaleX: 1.1 }}
+          whileTap={{ scaleX: 0.95 }}
           className="flex justify-center items-center gap-2
           p-[1em_3em] 
           text-body-text bg-blue_d dark:bg-blue_l text-white font-semibold
