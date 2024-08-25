@@ -36,7 +36,7 @@ function Navbar() {
       className="
       fixed sm:absolute z-10 inset-x-0 bottom-0 sm:top-0
       flex items-center
-      h-[7.5svh]
+      w-[100svw] h-[7.5svh]
       p-1
       bg-light-flash dark:bg-dark-rich
       overflow-hidden

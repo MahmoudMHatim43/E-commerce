@@ -10,7 +10,7 @@ import Shop from "./pages/Shop";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
 import Admin from "./pages/Admin";
-// App:
+// COMPONENTS:
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 

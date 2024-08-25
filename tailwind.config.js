@@ -21,7 +21,7 @@ module.exports = {
       colors: {
         // light:
         "light-smoke": "#F2F3F4",
-        "light-flash": "#F5F5F5",
+        "light-flash": "#EFEFEF",
         "light-peach": "#FFE5B4",
         "light-t1": "#111111",
         "light-t2": "#646464",

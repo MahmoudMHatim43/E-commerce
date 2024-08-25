@@ -19,7 +19,7 @@ function Hero() {
       className="
       hero-section-css
       flex flex-col items-center justify-evenly
-      w-full h-[100svh] sm:h-[92.5svh]
+      w-full min-h-[100svh] sm:h-[92.5svh]
       p-2 mt-0 sm:mt-[7.5svh]
       shadow-lg
       "

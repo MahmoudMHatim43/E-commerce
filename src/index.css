@@ -9,3 +9,22 @@
 body {
   width: 100svw;
 }
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #495e89;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #495e89;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #495e89 transparent;
+}
