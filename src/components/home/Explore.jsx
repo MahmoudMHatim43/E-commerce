@@ -9,7 +9,7 @@ function Explore() {
     setNom(id);
   }
   const headings = ["Heading 1", "Heading 2", "Heading 3"];
-  const images = ["vector-1.png", "vector-2.png", "vector-3.png"];
+  const images = ["v-1.png", "v-2.png", "v-3.png"];
   return (
     <motion.section
       ref={ref}
@@ -20,14 +20,26 @@ function Explore() {
       hidden md:flex justify-center gap-10
       h-[50svh]
       mb-20
-    bg-gray-200 dark:bg-dark-smoke
       overflow-visible"
     >
+      <div class="expolre-svg">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
       <motion.div
         className="
         relative -bottom-12 z-10
         flex-2 flex flex-col items-center justify-end
-        min-h-full"
+        min-h-full w-1/2"
       >
         {headings.map((heading, index) => (
           <motion.div
@@ -35,7 +47,8 @@ function Explore() {
             onHoverStart={() => handleNom(index)}
             whileHover={{ opacity: 1, scale: 1.02 }}
             className="
-            font-Nuntio bg-black p-6 m-2 rounded-2xl shadow-2xl text-white max-w-[600px] overflow-hidden"
+            font-Nuntio bg-black p-6 m-2 rounded-2xl shadow-2xl text-white max-w-[600px] overflow-hidden
+            border"
           >
             <h2 className="font-bold text-lg text-dark-t1">{heading}</h2>
             <p className="text-dark-t2">
@@ -45,17 +58,17 @@ function Explore() {
           </motion.div>
         ))}
       </motion.div>
-      <motion.div className="h-full flex items-center overflow-hidden">
+      <motion.div className="h-full flex items-center w-1/2 overflow-hidden">
         {images.map(
           (image, index) =>
             index === nom && (
               <motion.img
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0, x: 50, y: -15 }}
+                animate={{ opacity: 1, x: 0, y: 0 }}
+                transition={{ duration: 0.75 }}
                 src={`vectors/${image}`}
                 alt="vector"
-                className="w-[300px] object-cover"
+                className="object-cover h-full relative z-10"
               />
             )
         )}
