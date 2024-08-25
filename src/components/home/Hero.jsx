@@ -1,11 +1,6 @@
 import ToggleButton from "../ToggleButton";
 import { motion } from "framer-motion";
-import {
-  FaArrowRight,
-  FaShoppingCart,
-  FaBars,
-  FaChevronDown,
-} from "react-icons/fa";
+import { FaArrowRight, FaShoppingCart, FaBars } from "react-icons/fa";
 import { useState } from "react";
 
 function Hero() {
@@ -29,12 +24,32 @@ function Hero() {
       shadow-lg
       "
     >
-      <div className="sm:hidden">
+      <div
+        className="
+        sm:hidden"
+      >
         <FaBars
           className="
         absolute top-4 left-4 z-10
         text-3xl text-orange-cstm"
         />
+        <div
+          className="
+          absolute top-4 right-1/2 translate-x-1/2 z-10
+          flex flex-col items-center
+          "
+        >
+          <img
+            src="logo.png"
+            alt="the logo"
+            className="
+          object-cover
+          w-[50px]"
+          />
+          <span className="text-2xl text-light-flash font-Caveat w-[105%]">
+            React Store
+          </span>
+        </div>
         <ToggleButton onToggle={handldeTheme} theme={mode} />
       </div>
 
@@ -44,7 +59,10 @@ function Hero() {
         transition={{ delay: 0.5, duration: 1 }}
         className="hero-text-container w-full"
       >
-        <h1 className="text-[6rem] sm:text-9xl tracking-tighter md:tracking-wider leading-none text-white font-josefin text-balance font-bold overflow-hidden">
+        <h1
+          className="
+          text-[6rem] sm:text-9xl tracking-tighter md:tracking-wider leading-none text-white font-josefin text-balance font-bold overflow-hidden"
+        >
           <span className="text-blue-800">YOUR </span>
           <span className="text-blue-800"> STYLE</span> IS OUR
           <span className="text-orange-cstm"> PRIORITY</span>
@@ -63,13 +81,13 @@ function Hero() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
           className="
-        relative z-10 cursor-pointer
-        flex items-center gap-2
-        p-[1em_2em]
-        text-body-text text-center text-white font-Nuntio font-semibold
-        bg-blue-900
-        rounded-xl shadow shadow-fuchsia-800
-        "
+          relative z-10 cursor-pointer
+          flex items-center gap-2
+          p-[1em_2em]
+          text-body-text text-center text-white font-Nuntio font-semibold
+         bg-blue-900
+          rounded-xl shadow shadow-fuchsia-800
+         "
         >
           <span>Shop Now</span>
           <FaArrowRight />

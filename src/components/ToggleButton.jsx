@@ -31,7 +31,9 @@ function ToggleButton({ onToggle, theme }) {
           }}
         />
       </div>
-      <span className="absolute top-14 right-4 z-10">{theme}</span>
+      <span className="absolute top-14 right-4 z-10 text-light-flash">
+        {theme}
+      </span>
     </>
   );
 }
