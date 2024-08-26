@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-// place holder to avoid redux errors requiring a valid reducer
-const tempReducer = (state = {}, action) => {
-  return state;
-};
+import themeReducer from "./slices/theme";
+import productsReducer from "./slices/products";
+
 export const store = configureStore({
   reducer: {
-    temp: tempReducer,
+    theme: themeReducer,
+    products: productsReducer,
   },
 });

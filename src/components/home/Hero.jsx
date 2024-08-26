@@ -44,8 +44,8 @@ function Hero() {
           flex items-center gap-2
           p-[1em_2em]
           text-body-text text-center text-white font-Nuntio font-semibold
-         bg-blue-900
-          rounded-xl shadow shadow-fuchsia-800
+         bg-blue-900 hover:bg-blue-800 duration-300
+          rounded-lg
          "
         >
           <span>Shop Now</span>
@@ -60,8 +60,9 @@ function Hero() {
         flex items-center gap-2
         p-[1em_2em]
         text-body-text text-center text-white font-Nuntio font-semibold
-        bg-gray-600
-        rounded-xl shadow shadow-fuchsia-800"
+        bg-gray-600 hover:bg-gray-500 duration-300
+        rounded-lg
+        "
         >
           <span>View Cart</span>
           <FaShoppingCart />

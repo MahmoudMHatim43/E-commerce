@@ -12,7 +12,6 @@ import {
   FaGem,
   FaMedkit,
 } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
 
 function Categories() {
   const ref = useRef(null);

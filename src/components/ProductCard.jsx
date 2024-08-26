@@ -14,11 +14,11 @@ function ProductCard({ product }) {
       className="
       flex flex-col items-center justify-between gap-2
       w-[250px] lg:w-[300px] p-4
-     bg-light-flash border dark:bg-dark-smoke border-gray-500
+     bg-light-second border dark:bg-dark-main border-gray-500
       rounded-2xl shadow-2xl font-Nuntio"
     >
       <img
-        src={product.images[1]}
+        src={product.images[0]}
         alt="product image"
         className="object-cover w-[95%] max-h-[300px] rounded-xl"
       />

@@ -1,0 +1,18 @@
+import React from "react";
+
+function Search() {
+  return (
+    <div className="col-span-12 row-span-1 flex justify-center items-center p-4 bg-light-second dark:bg-dark-second rounded-lg shadow-md">
+      <input
+        type="text"
+        placeholder="Search for products..."
+        className="w-full max-w-[600px] p-2 text-light-t1 dark:text-dark-t1 bg-white dark:bg-dark-main border border-gray-300 dark:border-gray-600 rounded-l-lg focus:outline-none"
+      />
+      <button className="p-2 bg-blue-700 text-white rounded-r-lg hover:bg-blue-600 transition">
+        Search
+      </button>
+    </div>
+  );
+}
+
+export default Search;

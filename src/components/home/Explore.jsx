@@ -1,25 +1,20 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-
+const headings = ["Heading 1", "Heading 2", "Heading 3"];
+const images = ["v-1.png", "v-2.png", "v-3.png"];
 function Explore() {
-  const [nom, setNom] = useState(0);
+  const [vectorNo, setVectorNo] = useState(0);
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  function handleNom(id) {
-    setNom(id);
+  const isInView = useInView(ref, { once: false });
+  function handleVector(id) {
+    setVectorNo(id);
   }
-  const headings = ["Heading 1", "Heading 2", "Heading 3"];
-  const images = ["v-1.png", "v-2.png", "v-3.png"];
   return (
     <motion.section
-      ref={ref}
-      initial={{ x: -200, opacity: 0 }}
-      animate={{ x: isInView ? 0 : -200, opacity: 1 }}
       className="
       relative
       hidden md:flex justify-center gap-10
       h-[50svh]
-      mb-20
       overflow-visible"
     >
       <div class="expolre-svg">
@@ -36,6 +31,10 @@ function Explore() {
         </svg>
       </div>
       <motion.div
+        ref={ref}
+        initial={{ x: -200, opacity: 0 }}
+        animate={{ x: isInView ? 0 : -200, opacity: 1 }}
+        transition={{ duration: 0.5 }}
         className="
         relative -bottom-12 z-10
         flex-2 flex flex-col items-center justify-end
@@ -43,12 +42,14 @@ function Explore() {
       >
         {headings.map((heading, index) => (
           <motion.div
-            initial={{ opacity: 0.8 }}
-            onHoverStart={() => handleNom(index)}
-            whileHover={{ opacity: 1, scale: 1.02 }}
+            initial={{ opacity: 1 }}
+            onHoverStart={() => handleVector(index)}
+            whileHover={{ scale: 1.02 }}
             className="
-            font-Nuntio bg-black p-6 m-2 rounded-2xl shadow-2xl text-white max-w-[600px] overflow-hidden
-            border"
+            max-w-[600px] 
+            p-6 m-2 rounded-lg shadow-xl
+            font-Nuntio bg-black hover:bg-[#1a1a1a] overflow-hidden
+            cursor-pointer border"
           >
             <h2 className="font-bold text-lg text-dark-t1">{heading}</h2>
             <p className="text-dark-t2">
@@ -61,7 +62,7 @@ function Explore() {
       <motion.div className="h-full flex items-center w-1/2 overflow-hidden">
         {images.map(
           (image, index) =>
-            index === nom && (
+            index === vectorNo && (
               <motion.img
                 initial={{ opacity: 0, x: 50, y: -15 }}
                 animate={{ opacity: 1, x: 0, y: 0 }}

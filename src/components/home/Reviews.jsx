@@ -82,7 +82,7 @@ function Reviews() {
               flex flex-col items-center gap-6
               w-[80svw] md:w-[60svw] 
               mx-auto my-5 p-4 
-              border border-orange-cstm bg-light-flash dark:bg-dark-smoke text-center  text-light-t1 dark:text-dark-t1 rounded-2xl shadow-md shadow-red-600"
+              border border-orange-cstm bg-light-second dark:bg-dark-second text-center text-light-t1 dark:text-dark-t1 rounded-xl shadow-sm shadow-purple-500"
               >
                 <img
                   src={user.image}
