@@ -1,15 +1,36 @@
 import React from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="bg-dark-smoke text-dark-t1 py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div className="md:col-span-2">
-          <p className="text-dark-t2 mb-4">Terms · Privacy Policy</p>
+    <>
+      <div
+        className="
+        grid grid-cols-2 md:grid-cols-4 gap-4
+        max-w-6xl
+        mx-auto p-4
+        font-Josefin"
+      >
+        {/*  */}
+        <div
+          className="
+          md:col-span-2
+          "
+        >
+          <p className="text-light-t2 dark:text-dark-t2">
+            Terms · Privacy Policy
+          </p>
         </div>
+        {/*  */}
         <div>
-          <h3 className="text-dark-t1 font-semibold">Products</h3>
-          <ul className="text-dark-t2 mt-2 space-y-2">
+          <span
+            className="
+          text-purple-600 text-body-text font-bold
+            "
+          >
+            Products
+          </span>
+          <ul className="text-light-t2 dark:text-dark-t2 mt-2 space-y-2">
             <li>Web Studio</li>
             <li>DynamicBox Flex</li>
             <li>Programming Forms</li>
@@ -17,9 +38,16 @@ function Footer() {
             <li>Command-line</li>
           </ul>
         </div>
+        {/*  */}
         <div>
-          <h3 className="text-dark-t1 font-semibold">Resources</h3>
-          <ul className="text-dark-t2 mt-2 space-y-2">
+          <span
+            className="
+          text-purple-600 text-body-text font-bold
+          "
+          >
+            Resources
+          </span>
+          <ul className="text-light-t2 dark:text-dark-t2 mt-2 space-y-2">
             <li>Documentation</li>
             <li>Tutorials & Guides</li>
             <li>Blog</li>
@@ -27,9 +55,16 @@ function Footer() {
             <li>Partners</li>
           </ul>
         </div>
+        {/*  */}
         <div>
-          <h3 className="text-dark-t1 font-semibold">Company</h3>
-          <ul className="text-dark-t2 mt-2 space-y-2">
+          <span
+            className="
+          text-purple-600 text-body-text font-bold
+          "
+          >
+            Company
+          </span>
+          <ul className="text-light-t2 dark:text-dark-t2 mt-2 space-y-2">
             <li>Home</li>
             <li>About us</li>
             <li>Company values</li>
@@ -37,9 +72,16 @@ function Footer() {
             <li>Privacy Policy</li>
           </ul>
         </div>
+        {/*  */}
         <div className="md:col-span-2">
-          <h3 className="text-dark-t1 font-semibold">Subscribe</h3>
-          <p className="text-dark-t2 mt-2">
+          <span
+            className="
+          text-purple-600 text-body-text font-bold
+            "
+          >
+            Subscribe
+          </span>
+          <p className="text-light-t2 dark:text-dark-t2 mt-2">
             Get the latest news and articles to your inbox every month.
           </p>
           <form className="flex mt-4">
@@ -50,17 +92,18 @@ function Footer() {
             />
             <button
               type="submit"
-              className="p-2 bg-purple-500 text-white rounded-r-md hover:bg-purple-600"
+              className="px-4 bg-purple-500 text-white rounded-r-md hover:bg-purple-700 duration-500"
             >
-              →
+              <FaArrowRight />
             </button>
           </form>
         </div>
       </div>
+      {/*  */}
       <div className="text-center mt-10 text-dark-t2">
-        <p>Made with ♥ by Hoota</p>
+        <span className="text-body-text">Made with ♥ by Hoota</span>
       </div>
-    </footer>
+    </>
   );
 }
 

@@ -1,58 +1,17 @@
-import ToggleButton from "../ToggleButton";
 import { motion } from "framer-motion";
-import { FaArrowRight, FaShoppingCart, FaBars } from "react-icons/fa";
-import { useState } from "react";
+import { FaArrowRight, FaShoppingCart } from "react-icons/fa";
 
 function Hero() {
-  const [mode, setMode] = useState("Dark Mode");
-  const handldeTheme = (isOn) => {
-    if (isOn) {
-      document.documentElement.classList.add("dark");
-      setMode("Light Mode");
-      return;
-    }
-    document.documentElement.classList.remove("dark");
-    setMode("Dark Mode");
-  };
   return (
     <section
       className="
       hero-section-css
       flex flex-col items-center justify-evenly
-      w-full min-h-[100svh] sm:h-[92.5svh]
-      p-2 mt-0 sm:mt-[7.5svh]
+      min-h-[100svh]
+      p-4
       shadow-lg
       "
     >
-      <div
-        className="
-        sm:hidden"
-      >
-        <FaBars
-          className="
-        absolute top-4 left-4 z-10
-        text-3xl text-orange-cstm"
-        />
-        <div
-          className="
-          absolute top-4 right-1/2 translate-x-1/2 z-10
-          flex flex-col items-center
-          "
-        >
-          <img
-            src="logo.png"
-            alt="the logo"
-            className="
-          object-cover
-          w-[50px]"
-          />
-          <span className="text-2xl text-light-flash font-Caveat w-[105%]">
-            React Store
-          </span>
-        </div>
-        <ToggleButton onToggle={handldeTheme} theme={mode} />
-      </div>
-
       <motion.div
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

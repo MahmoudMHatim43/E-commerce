@@ -20,16 +20,14 @@ module.exports = {
       },
       colors: {
         // light:
-        "light-smoke": "#F2F3F4",
-        "light-flash": "#EFEFEF",
-        "light-peach": "#FFE5B4",
+        "light-main": "#F2F3F4",
+        "light-second": "#EFEFEF",
         "light-t1": "#111111",
         "light-t2": "#646464",
         // dark:
-        "dark-smoke": "#100C08",
-        "dark-erie": "#1B1B1B",
-        "dark-rich": "#010B13",
-        "dark-t1": "#eeeeee ",
+        "dark-main": "#1B1B1B",
+        "dark-second": "#100C08",
+        "dark-t1": "#e1e1e1 ",
         "dark-t2": "#d0d0d0",
         // other:
         "orange-cstm": "#FF5800",

@@ -9,6 +9,7 @@
 body {
   width: 100svw;
 }
+/* SCROLLLBAR */
 ::-webkit-scrollbar {
   width: 0.5em;
 }
@@ -28,7 +29,7 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #495e89 transparent;
 }
-
+/* EXPLOR SECTION */
 .expolre-svg {
   position: absolute;
   top: 0;
@@ -44,6 +45,7 @@ body {
   width: calc(100% + 1.3px);
   height: 500px;
 }
+/* SVG SHAPES */
 .custom-shape-divider-bottom-1724591147 {
   position: absolute;
   bottom: 0;
@@ -64,3 +66,4 @@ body {
 .custom-shape-divider-bottom-1724591147 .shape-fill {
   fill: black;
 }
+/* SHOP SECTION */
