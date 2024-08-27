@@ -18,7 +18,7 @@ function Promotion() {
   const skeletonArray = Array(8).fill(0);
 
   return (
-    <section className="relative flex flex-col justify-center items-center p-6 h-svh">
+    <section className="relative flex flex-col justify-center items-center p-6">
       {isPending ? (
         <motion.div
           initial={{ opacity: 0 }}
