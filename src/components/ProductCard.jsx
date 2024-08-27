@@ -39,7 +39,7 @@ function ProductCard({ product }) {
         ) : (
           <button
             onClick={() => dispatch(addToCart(product))}
-            className="p-2 text-onPrimary bg-primary rounded-md">
+            className="p-2 bg-zinc-800 dark:bg-slate-300 dark:text-black rounded-md">
             Add To Cart
           </button>
         )}
