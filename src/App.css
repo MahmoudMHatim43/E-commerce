@@ -28,18 +28,15 @@
   background-size: cover;
   position: relative;
 }
-.hero-text-container {
-  mix-blend-mode: screen;
-}
 .hero-section-css::before {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    to top,
+    to bottom,
     black,
-    transparent 70%,
-    transparent 60%,
+    transparent 40%,
+    transparent 10%,
     black
   );
   z-index: 5;

@@ -17,8 +17,7 @@ function Promotion() {
         relative flex flex-col justify-center items-center
         min-h-[50vh] md:my-32 mx-auto
         p-6 bg-light-main dark:bg-dark-second rounded-lg shadow-2xl
-      "
-    >
+      ">
       {isPending ? (
         <div className="text-center">
           <PulseLoader />
@@ -38,8 +37,7 @@ function Promotion() {
               text-light-t1 dark:text-dark-t1
               border-b border-t border-gray-300 dark:border-gray-600
               w-full py-4 mb-6
-            "
-          >
+            ">
             Best Deals
           </h1>
           <motion.div
@@ -50,8 +48,7 @@ function Promotion() {
               grid grid-flow-col grid-rows-1 sm:grid-rows-1 gap-4
               overflow-x-auto
               w-full h-full p-4
-            "
-          >
+            ">
             {products.map((item) => (
               <div
                 key={item.id}
@@ -61,8 +58,7 @@ function Promotion() {
                     bg-light-main dark:bg-dark-main
                     rounded-lg shadow-lg border border-gray-200 dark:border-gray-600
                     hover:shadow-2xl transition-shadow duration-200 ease-in-out
-                  "
-              >
+                  ">
                 <img
                   src={item.images[0]}
                   alt="promo image"
@@ -83,16 +79,14 @@ function Promotion() {
                   className="
                       absolute top-2 left-2 p-1
                       bg-red-600 text-white text-sm font-bold rounded
-                    "
-                >
+                    ">
                   %{(discount * 100).toFixed(0)} Off
                 </span>
                 <button
                   className="
                       mt-auto p-2 bg-blue-700 text-white
                       rounded-lg shadow-md hover:bg-blue-600 transition
-                    "
-                >
+                    ">
                   Details
                 </button>
               </div>

@@ -18,8 +18,7 @@ function Trending() {
         flex flex-col lg:w-[95svw] items-center gap-4
         mx-auto mt-[5svh] p-4
         bg-light-second dark:bg-dark-second rounded-lg shadow-lg
-      "
-    >
+      ">
       <h1 className="text-heading-xl text-light-t1 dark:text-dark-t1 font-Nuntio font-bold">
         Trending
       </h1>

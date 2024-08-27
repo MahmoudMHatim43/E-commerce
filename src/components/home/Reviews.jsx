@@ -10,6 +10,7 @@ import {
   FaArrowLeft,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import Wave from "../seperate/Wave";
 const icons = [
   <FaFacebook />,
   <FaSpotify />,
@@ -58,8 +59,7 @@ function Reviews() {
        flex justify-evenly
        lg:w-[80svw] mx-auto
        p-6
-       text-heading-xl"
-      >
+       text-heading-xl">
         {icons.map((icon) => icon)}
       </div>
       {/*  */}
@@ -82,8 +82,7 @@ function Reviews() {
               flex flex-col items-center gap-6
               w-[80svw] md:w-[60svw] 
               mx-auto my-5 p-4 
-              border border-orange-cstm bg-light-second dark:bg-dark-second text-center text-light-t1 dark:text-dark-t1 rounded-xl shadow-sm shadow-purple-500"
-              >
+              border border-orange-cstm bg-light-second dark:bg-dark-second text-center text-light-t1 dark:text-dark-t1 rounded-xl shadow-sm shadow-purple-500">
                 <img
                   src={user.image}
                   alt="user image"
@@ -105,19 +104,7 @@ function Reviews() {
         sm:block"
         />
       </div>
-      <div className="custom-shape-divider-bottom-1724591147">
-        <svg
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-            className="shape-fill"
-          ></path>
-        </svg>
-      </div>
+      <Wave />
     </motion.section>
   );
 }

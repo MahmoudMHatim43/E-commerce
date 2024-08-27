@@ -25,8 +25,8 @@ module.exports = {
         "light-t1": "#111111",
         "light-t2": "#646464",
         // dark:
-        "dark-main": "#1B1B1B",
-        "dark-second": "#100C08",
+        "dark-main": "#121212",
+        "dark-second": "#0D0D0D",
         "dark-t1": "#e1e1e1 ",
         "dark-t2": "#d0d0d0",
         // other:

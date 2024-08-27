@@ -39,13 +39,11 @@ function Categories() {
       mx-auto my-5 p-4
       sm:w-[90svw]
       text-body-text text-light_t1 dark:text-dark_t1
-      rounded-2xl shadow-lg"
-    >
+      rounded-2xl shadow-lg">
       <h1 className="text-heading-xl font-Nuntio font-bold">Catagories</h1>
       <div
         className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4
-        p-4"
-      >
+        p-4">
         {categories.map((catagory, idx) => (
           <motion.div
             whileHover={{ scale: 1.02, opacity: 1 }}
@@ -54,8 +52,7 @@ function Categories() {
             className="flex flex-col justify-center items-center
             p-2
             text-xl text-dark_t1 bg-gray_l2 dark:bg-gray_d1
-            rounded-xl shadow-xl opacity-[0.6] cursor-pointer border border-gray-500"
-          >
+            rounded-xl shadow-xl opacity-[0.6] cursor-pointer border border-gray-500">
             <span>{catagory.icon}</span>
             <span className="text-body-text text-center">{catagory.name}</span>
           </motion.div>

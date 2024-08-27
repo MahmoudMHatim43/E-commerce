@@ -18,8 +18,7 @@ function ProductCard({ product }) {
       flex flex-col items-center justify-between gap-2
       p-4
     bg-light-second border dark:bg-dark-main border-gray-500
-      rounded-2xl shadow-2xl font-Josefin"
-    >
+      rounded-2xl shadow-2xl font-Josefin">
       <img
         src={product.images[0]}
         alt="product image"
@@ -29,8 +28,7 @@ function ProductCard({ product }) {
         <span
           className="
           text-lg
-          font-bold"
-        >
+          font-bold">
           {product.title}
         </span>
         <span className="hidden lg:inline-block text-sm">{desc}</span>
@@ -41,14 +39,12 @@ function ProductCard({ product }) {
             <div className="flex gap-2">
               <button
                 onClick={() => dispatch(addToCart(product))}
-                className="p-[0.25em_1.5em] bg-blue-700 rounded-xl shadow"
-              >
+                className="p-[0.25em_1.5em] bg-blue-700 rounded-xl shadow">
                 Add
               </button>
               <button
                 onClick={() => dispatch(removeFromCart(product.id))}
-                className="p-[0.25em_1.5em] bg-red-700 rounded-xl shadow"
-              >
+                className="p-[0.25em_1.5em] bg-red-700 rounded-xl shadow">
                 Remove
               </button>
             </div>
@@ -56,8 +52,7 @@ function ProductCard({ product }) {
               className="
                w-6 
                text-center bg-gray-600
-               rounded-full"
-            >
+               rounded-full">
               {items.map((item) => item.id === product.id && item.quantity)}
             </span>
           </div>
@@ -67,8 +62,7 @@ function ProductCard({ product }) {
             className="
             p-[0.25em_1.5em]
             text-body-text bg-blue-700 text-white
-            rounded-xl shadow-xl"
-          >
+            rounded-xl shadow-xl">
             Add To Cart
           </button>
         )}

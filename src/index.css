@@ -21,47 +21,8 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #495e89;
 }
-
 /* Firefox */
 * {
   scrollbar-width: thin;
   scrollbar-color: #495e89 transparent;
 }
-/* EXPLOR SECTION */
-.expolre-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.expolre-svg svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 500px;
-}
-/* SVG SHAPES */
-.custom-shape-divider-bottom-1724591147 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1724591147 svg {
-  position: relative;
-  display: block;
-  width: calc(300% + 1.3px);
-  height: 700px;
-}
-
-.custom-shape-divider-bottom-1724591147 .shape-fill {
-  fill: black;
-}
-/* SHOP SECTION */
