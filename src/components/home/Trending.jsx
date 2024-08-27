@@ -1,17 +1,13 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { PulseLoader } from "react-spinners";
-import { fetchProducts } from "../../store/slices/products";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import ProductCard from "../ProductCard";
+
 function Trending() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
-  const dispatch = useDispatch();
   const { products, isPending, error } = useSelector((state) => state.products);
-  useEffect(() => {
-    dispatch(fetchProducts());
-  }, []);
   return (
     <motion.section
       ref={ref}

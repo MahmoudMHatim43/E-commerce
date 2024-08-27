@@ -6,8 +6,7 @@ function Shop() {
   return (
     <section
       className="
-      grid grid-cols-12 grid-rows-[auto_auto_1fr] sm:grid-rows-[auto_1fr] gap-4
-      min-h-[100svh]
+      grid grid-cols-12 grid-rows-[auto_auto_1fr] sm:grid-rows-[auto_1fr] gap-2
       mt-[10svh]
     "
     >

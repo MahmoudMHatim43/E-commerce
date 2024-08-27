@@ -2,7 +2,12 @@ import React from "react";
 
 function Search() {
   return (
-    <div className="col-span-12 row-span-1 flex justify-center items-center p-4 bg-light-second dark:bg-dark-second rounded-lg shadow-md">
+    <div
+      className="
+    col-span-12 flex justify-center items-center
+    p-4
+    rounded-lg border"
+    >
       <input
         type="text"
         placeholder="Search for products..."

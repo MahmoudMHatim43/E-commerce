@@ -19,10 +19,16 @@ const productsSlice = createSlice({
   name: "products",
   initialState: {
     products: [],
+    categories: [],
+    selectedCategory: "Clothes",
     isPending: false,
     error: null,
   },
-  reducers: {},
+  reducers: {
+    setSelectedCategory(state, action) {
+      state.selectedCategory = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchProducts.pending, (state) => {
@@ -32,6 +38,10 @@ const productsSlice = createSlice({
       .addCase(fetchProducts.fulfilled, (state, action) => {
         state.isPending = false;
         state.products = action.payload;
+        const categories = new Set(
+          action.payload.map((product) => product.category.name)
+        );
+        state.categories = [...categories];
       })
       .addCase(fetchProducts.rejected, (state, action) => {
         state.isPending = false;
@@ -40,4 +50,5 @@ const productsSlice = createSlice({
   },
 });
 export { fetchProducts };
+export const { setSelectedCategory } = productsSlice.actions;
 export default productsSlice.reducer;

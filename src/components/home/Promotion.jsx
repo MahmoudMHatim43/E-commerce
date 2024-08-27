@@ -6,10 +6,10 @@ import { useDispatch, useSelector } from "react-redux";
 
 function Promotion() {
   const dispatch = useDispatch();
-  const { products, isPending, error } = useSelector((state) => state.products);
   useEffect(() => {
     dispatch(fetchProducts());
-  }, []);
+  }, [dispatch]);
+  const { products, isPending, error } = useSelector((state) => state.products);
   const discount = 0.35;
   return (
     <section

@@ -1,53 +1,40 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { PulseLoader } from "react-spinners";
 import ProductCard from "../ProductCard";
+import { PulseLoader } from "react-spinners";
+import { useSelector } from "react-redux";
 
-function Products({ selectedCategory }) {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [errMsg, setErrMsg] = useState(null);
-
-  useEffect(() => {
-    if (selectedCategory) {
-      getProducts();
-    }
-  }, [selectedCategory]);
-
-  const getProducts = async () => {
-    try {
-      setLoading(true);
-      const { data } = await axios.get(
-        `https://api.escuelajs.co/api/v1/products/?categoryId=${selectedCategory}`
-      );
-      if (data && data.length) setProducts(data);
-      setLoading(false);
-    } catch (error) {
-      console.error(error.message);
-      setErrMsg(error.message);
-      setLoading(false);
-    }
-  };
+function Products() {
+  const { products, isPending, error, selectedCategory } = useSelector(
+    (state) => state.products
+  );
 
   return (
-    <div className="col-span-12 sm:col-span-9 p-4 bg-light-main dark:bg-dark-main rounded-lg shadow-lg">
+    <div
+      className="
+    col-span-12 sm:col-span-9
+    w-[95%] mx-auto max-h-[75svh] overflow-y-auto
+  bg-light-main dark:bg-dark-main
+    rounded-lg shadow-lg"
+    >
       <h2 className="text-heading-xl text-light-t1 dark:text-dark-t1 font-Nuntio font-bold mb-4">
-        Products
+        {selectedCategory}
       </h2>
-      {loading ? (
+      {isPending ? (
         <div className="flex justify-center items-center">
           <PulseLoader />
           <span className="ml-4 text-light-t2 dark:text-dark-t2">
             Loading...
           </span>
         </div>
-      ) : errMsg ? (
-        <span className="text-light-t2 dark:text-dark-t2">{errMsg}</span>
+      ) : error ? (
+        <span className="text-light-t2 dark:text-dark-t2">{error}</span>
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {products.map((product) => (
-            <ProductCard product={product} key={product.id} />
-          ))}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {products.map(
+            (product) =>
+              product.category.name === selectedCategory && (
+                <ProductCard product={product} key={product.id} />
+              )
+          )}
         </div>
       )}
     </div>
