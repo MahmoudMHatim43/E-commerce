@@ -5,13 +5,13 @@ module.exports = {
     darkMode: "media",
     extend: {
       fontSize: {
-        "logo-name": "clamp(1.75rem, 4vw, 2.5rem)",
-        "heading-xl": "clamp(2rem, 5vw, 3.5rem)",
-        "heading-lg": "clamp(1.75rem, 4vw, 3rem)",
-        "heading-md": "clamp(1.5rem, 3vw, 2.5rem)",
-        "card-title": "clamp(1.25rem, 2.5vw, 2rem)",
-        "body-text": "clamp(1rem, 2vw, 1.1rem)",
-        "small-text": "clamp(0.875rem, 1.5vw, 1rem)",
+        "logo-name": "clamp(1.75rem, 3.5vw + 0.5rem, 2.5rem)",
+        "heading-section": "clamp(2rem, 4.5vw + 0.5rem, 3rem)",
+        "heading-lg": "clamp(1.75rem, 4vw + 0.25rem, 3rem)",
+        "heading-md": "clamp(1.5rem, 3.5vw + 0.25rem, 2.5rem)",
+        "card-title": "clamp(1.25rem, 2.5vw + 0.25rem, 2rem)",
+        "body-text": "clamp(1rem, 2vw + 0.25rem, 1.2rem)",
+        "small-text": "clamp(0.875rem, 1.75vw, 1rem)",
       },
       fontFamily: {
         Nuntio: ["Nunito", "sans-serif"],
