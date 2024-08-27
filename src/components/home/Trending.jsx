@@ -1,36 +1,34 @@
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import { PulseLoader } from "react-spinners";
+import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import ProductCard from "../ProductCard";
+import PromoSkeleton from "../PromoSkeleton";
 
 function Trending() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
   const { products, isPending, error } = useSelector((state) => state.products);
+  const skeletonArray = Array(8).fill(0);
   return (
-    <motion.section
-      ref={ref}
-      initial={{ x: -200, opacity: 0 }}
-      animate={{ x: isInView ? 0 : -200, opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="
-        flex flex-col lg:w-[95svw] items-center gap-4
-        mx-auto mt-[5svh] p-4
-        bg-light-second dark:bg-dark-second rounded-lg shadow-lg
-      ">
-      <h1 className="text-heading-xl text-light-t1 dark:text-dark-t1 font-Nuntio font-bold">
+    <motion.section className="flex flex-col items-center gap-4 p-4">
+      <h1 className="text-heading-section font-Nuntio font-bold overflow-hidden">
         Trending
       </h1>
-      <div className="grid grid-flow-col grid-rows-1 lg:grid-rows-2 gap-2 lg:gap-4 overflow-x-scroll w-full">
+      <div className="grid grid-flow-col gap-x-4 w-full p-6 overflow-x-scroll">
         {isPending ? (
-          <PulseLoader />
+          skeletonArray.map((_, idx) => <PromoSkeleton key={idx} />)
         ) : error ? (
-          <span className="text-light-t2 dark:text-dark-t2">{error}</span>
+          <span className="text-light-error dark:text-dark-error">{error}</span>
         ) : (
-          products.map((product) => {
-            return <ProductCard product={product} key={product.id} />;
-          })
+          products.map(
+            (product) =>
+              product.id < 20 && (
+                <motion.div
+                  initial={{ y: 0 }}
+                  whileHover={{ y: -10 }}
+                  key={product.id}
+                  className="min-w-[250px]">
+                  <ProductCard product={product} />
+                </motion.div>
+              )
+          )
         )}
       </div>
     </motion.section>

@@ -1,11 +1,14 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 function PromoCard({ product, discount }) {
   return (
     <>
-      <div className="relative flex flex-col gap-4 w-[250px] p-4 bg-blue-100 dark:bg-zinc-800 font-Nuntio rounded-2xl hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+      <motion.div
+        initial={{ y: 0 }}
+        whileHover={{ y: -10 }}
+        className="relative flex flex-col gap-4 w-[250px] p-4 bg-blue-100 dark:bg-zinc-800 font-Nuntio rounded-2xl hover:shadow-xl transition-shadow duration-300 cursor-pointer">
         <img
-          src={product.images[0]}
+          src={product.images[0] || "image-not-found.png"}
           alt="promo image"
           className="rounded-xl shadow-xl"
         />
@@ -24,7 +27,7 @@ function PromoCard({ product, discount }) {
         <button className="mt-auto p-2 bg-blue-700 text-white hover:bg-blue-500 transition rounded-lg shadow-md">
           Details
         </button>
-      </div>
+      </motion.div>
     </>
   );
 }

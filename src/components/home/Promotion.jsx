@@ -18,7 +18,7 @@ function Promotion() {
   const skeletonArray = Array(8).fill(0);
 
   return (
-    <section className="relative flex flex-col justify-center items-center p-4 h-svh">
+    <section className="relative flex flex-col justify-center items-center p-6 h-svh">
       {isPending ? (
         <motion.div
           initial={{ opacity: 0 }}
@@ -41,9 +41,17 @@ function Promotion() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
             className="grid grid-flow-col gap-x-4 w-full p-4 overflow-x-scroll">
-            {products.map((product, index) => (
-              <PromoCard product={product} key={index} discount={discount} />
-            ))}
+            {products.map(
+              (product, index) =>
+                index < 15 &&
+                index > 5 && (
+                  <PromoCard
+                    product={product}
+                    key={index}
+                    discount={discount}
+                  />
+                )
+            )}
           </motion.div>
         </>
       )}
