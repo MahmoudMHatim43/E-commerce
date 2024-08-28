@@ -17,7 +17,7 @@ function ProductCard({ product }) {
       <NavLink to={`/products/${product.id}`}>
         <img
           src={product.images[0] || "image-not-available.png"}
-          alt="product image"
+          alt={`product image${product.id}`}
           className="object-cover rounded-lg"
         />
         <span className="w-full p-1 text-md font-bold">{product.title}</span>

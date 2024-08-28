@@ -77,7 +77,7 @@ function Login() {
 
         <div className="text-center">
           <a
-            href="#"
+            href="/shop"
             className="text-blue-600 hover:underline dark:text-blue-400">
             Create an Account
           </a>

@@ -13,7 +13,7 @@ function PromoCard({ product, discount }) {
         <NavLink to={`/products/${product.id}`}>
           <img
             src={product.images[0] || "image-not-found.png"}
-            alt="promo image"
+            alt={`product image${product.price}`}
             className="rounded-xl shadow-xl"
           />
           <span className="text-lg font-bold">{product.title}</span>
