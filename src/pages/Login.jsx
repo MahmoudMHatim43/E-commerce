@@ -1,46 +1,52 @@
 import React from "react";
+import { FaEnvelope, FaLock } from "react-icons/fa";
 
 function Login() {
   return (
-    <div className="flex items-center justify-center min-h-[100svh] bg-light-main dark:bg-dark-main">
-      <div className="w-full max-w-md p-8 bg-white dark:bg-dark-second rounded-lg shadow-lg">
-        <h2 className="text-heading-lg text-light-t1 dark:text-dark-t1 font-bold text-center mb-6">
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-600">
+      <div className="w-full max-w-md p-8 bg-white dark:bg-dark-second rounded-2xl shadow-2xl">
+        <h2 className="text-3xl text-gray-800 dark:text-gray-200 font-bold text-center mb-6">
           Login to Your Account
         </h2>
 
-        {/* Email Input */}
         <div className="mb-4">
           <label
             htmlFor="email"
-            className="block text-light-t2 dark:text-dark-t2 mb-2"
-          >
+            className="block text-gray-600 dark:text-gray-400 mb-2">
             Email Address
           </label>
-          <input
-            type="email"
-            id="email"
-            className="w-full p-3 text-light-t1 dark:text-dark-t1 bg-light-second dark:bg-dark-main border border-gray-300 dark:border-gray-600 rounded focus:outline-none focus:border-blue-500"
-            placeholder="Enter your email"
-          />
+          <div className="flex items-center bg-gray-100 dark:bg-dark-main border border-gray-300 dark:border-gray-600 rounded-lg focus-within:border-blue-500">
+            <div className="p-3 text-gray-400 dark:text-gray-500">
+              <FaEnvelope />
+            </div>
+            <input
+              type="email"
+              id="email"
+              className="flex-1 p-3 bg-transparent text-gray-800 dark:text-gray-200 focus:outline-none"
+              placeholder="Enter your email"
+            />
+          </div>
         </div>
 
-        {/* Password Input */}
         <div className="mb-4">
           <label
             htmlFor="password"
-            className="block text-light-t2 dark:text-dark-t2 mb-2"
-          >
+            className="block text-gray-600 dark:text-gray-400 mb-2">
             Password
           </label>
-          <input
-            type="password"
-            id="password"
-            className="w-full p-3 text-light-t1 dark:text-dark-t1 bg-light-second dark:bg-dark-main border border-gray-300 dark:border-gray-600 rounded focus:outline-none focus:border-blue-500"
-            placeholder="Enter your password"
-          />
+          <div className="flex items-center bg-gray-100 dark:bg-dark-main border border-gray-300 dark:border-gray-600 rounded-lg focus-within:border-blue-500">
+            <div className="p-3 text-gray-400 dark:text-gray-500">
+              <FaLock />
+            </div>
+            <input
+              type="password"
+              id="password"
+              className="flex-1 p-3 bg-transparent text-gray-800 dark:text-gray-200 focus:outline-none"
+              placeholder="Enter your password"
+            />
+          </div>
         </div>
 
-        {/* Remember Me Checkbox */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center">
             <input
@@ -50,35 +56,29 @@ function Login() {
             />
             <label
               htmlFor="remember"
-              className="ml-2 text-light-t2 dark:text-dark-t2"
-            >
+              className="ml-2 text-gray-600 dark:text-gray-400">
               Remember Me
             </label>
           </div>
           <a
             href="#"
-            className="text-sm text-blue-600 hover:underline dark:text-blue-400"
-          >
+            className="text-sm text-blue-600 hover:underline dark:text-blue-400">
             Forgot Password?
           </a>
         </div>
 
-        {/* Submit Button */}
-        <button className="w-full p-3 bg-blue-700 text-white rounded-lg shadow-md hover:bg-blue-600 transition">
+        <button className="w-full p-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg shadow-lg hover:shadow-xl transition">
           Login
         </button>
 
-        {/* Divider */}
         <div className="flex items-center justify-center my-4">
-          <span className="text-sm text-light-t2 dark:text-dark-t2">or</span>
+          <span className="text-sm text-gray-600 dark:text-gray-400">or</span>
         </div>
 
-        {/* Sign Up Link */}
         <div className="text-center">
           <a
             href="#"
-            className="text-blue-600 hover:underline dark:text-blue-400"
-          >
+            className="text-blue-600 hover:underline dark:text-blue-400">
             Create an Account
           </a>
         </div>

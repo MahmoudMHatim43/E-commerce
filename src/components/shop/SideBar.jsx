@@ -1,5 +1,7 @@
-import { useEffect } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
 import {
   fetchProducts,
   setSelectedCategory,
@@ -7,6 +9,7 @@ import {
 import { FaTshirt, FaShoePrints, FaBoxes } from "react-icons/fa";
 import { MdDevices } from "react-icons/md";
 import { GiSofa } from "react-icons/gi";
+
 const icons = {
   Clothes: <FaTshirt />,
   Electronics: <MdDevices />,
@@ -14,45 +17,38 @@ const icons = {
   Shoes: <FaShoePrints />,
   Miscellaneous: <FaBoxes />,
 };
+
 function SideBar() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
+
   const { categories, selectedCategory } = useSelector(
     (state) => state.products
   );
+
   return (
-    <div
-      className="
-    col-span-12 sm:col-span-3 
-    min-h-full w-[95%] mx-auto
-    p-4
-  bg-light-second dark:bg-dark-second
-    rounded-lg shadow-md"
-    >
-      <ul className="flex sm:flex-col gap-4 sm:gap-6">
+    <div className="p-4 bg-white dark:bg-dark-second rounded-lg shadow-lg">
+      <ul className="flex flex-col space-y-4">
         {categories.map((category, idx) => (
-          <li
+          <motion.li
             key={idx}
             onClick={() => dispatch(setSelectedCategory(category))}
+            whileHover={{ scale: 1.05, x: 10 }}
             className={`
-              flex items-center gap-2
-              w-full
-              mx-auto
-              p-2
-              cursor-pointer hover:text-blue-600 
-              transition
+              flex items-center gap-3 cursor-pointer
+              p-3 rounded-lg
+              transition duration-300
               ${
                 selectedCategory === category
-                  ? "text-blue-600"
-                  : "text-light-t1 dark:text-dark-t1"
+                  ? "bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300"
+                  : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
               }
-              `}
-          >
+            `}>
             <span className="text-2xl">{icons[category]}</span>
-            <span className="hidden md:inline-block">{category}</span>
-          </li>
+            <span>{category}</span>
+          </motion.li>
         ))}
       </ul>
     </div>

@@ -10,32 +10,33 @@ import { FaJs } from "react-icons/fa";
 const steps = [
   {
     title: "Initial Contact",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Initial contact where we discuss your idea and goals.",
     icon: <IoIosContacts />,
   },
   {
     title: "Discovery Session",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description:
+      "A session to discuss your idea in more detail and how we can help.",
     icon: <MdPersonSearch />,
   },
   {
     title: "Contracting",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Creating a contract outlining the terms of our agreement.",
     icon: <FaFileContract />,
   },
   {
     title: "Fast Prototyping",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Creating a prototype of your idea to test and refine.",
     icon: <RiSlideshow2Line />,
   },
   {
     title: "Design Phase",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Designing the UI/UX of your application.",
     icon: <MdDesignServices />,
   },
   {
     title: "Develop & Listing for sale",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "Developing and listing your application for sale.",
     icon: <FaJs />,
   },
 ];
