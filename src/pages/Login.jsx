@@ -61,7 +61,7 @@ function Login() {
             </label>
           </div>
           <a
-            href="#"
+            href="/shop"
             className="text-sm text-blue-600 hover:underline dark:text-blue-400">
             Forgot Password?
           </a>
